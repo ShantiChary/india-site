@@ -1,0 +1,278 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Resets */
+html {
+  box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* ---------------------------------------- */
+
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+   
+  body {
+    font-size: 100%;
+    font-family: "Roboto", sans-serif;
+    color: #3d3536;
+    background-color: rgb(253, 249, 249);
+  }
+  
+  body, html {
+    /* important */
+    height: 100%;
+  }
+  a {
+    color: #a6989a;
+  }
+
+  .btn-mobile-menu {
+    display: none;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 4%;
+    left: 80%;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url(../images/menu.jpg);
+    background-size: cover;
+    border: none;
+    text-indent: 150%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  nav {
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    margin: 0 auto;
+    /* height: 100px; */
+    padding: 0 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid grey;  
+  }
+  
+  .sign {
+    width: 50px;
+    /* height: 100%; */
+  }
+  
+  nav ul {
+    width: 230px;
+    /* display: flex;
+    justify-content: space-between; */
+    padding: 5px 40px 0;
+  }
+  
+  nav ul li {
+  
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.14em;
+    list-style-type: none;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #000; /*#e5e5e5;*/
+  }
+  /* -------------------------------- 
+  
+  Modules - reusable parts of our design
+  
+  -------------------------------- */
+  .cd-container {
+    /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+    width: 90%;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .cd-container::after {
+    /* clearfix */
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  .cd-main-content {
+    /* you need to assign a min-height to the main content so that the children can inherit it*/
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .cd-fixed-bg {
+    position: relative;
+    min-height: 75%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+  }
+  .cd-fixed-bg h1 {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 90%;
+    max-width: 1170px;
+    text-align: center;
+	color: rgb(228, 226, 114);
+	text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+    font-size: 8em;
+  }
+
+ .cd-fixed-bg h2 {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 90%;
+    max-width: 1170px;
+    text-align: center;
+	color: rgb(228, 226, 114);
+	text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+    font-size: 4em;
+  }
+
+  .cd-fixed-bg.cd-bg-1 {
+    background-image: url("../images/bandhni.jpg");
+  }
+  .cd-fixed-bg.cd-bg-2 {
+    background-image: linear-gradient(rgba(255,255,255, 0.15), rgba(255,255,255,0.15)), url("../images/rajasthan.jpg");
+  }
+  .cd-fixed-bg.cd-bg-3 {
+    background-image:linear-gradient(rgba(255,255,255, 0.15), rgba(255,255,255,0.15)),  url("../images/temple.jpg");      
+  }
+  .cd-fixed-bg.cd-bg-4 {
+    background-image: linear-gradient(rgba(255,255,255, 0.15), rgba(255,255,255,0.15)), url("../images/kerala.jpg");
+  }
+  @media only screen and (min-width: 320px) {
+    /* .cd-fixed-bg h1, .cd-fixed-bg h2 {
+      font-size: 36px;
+    } */
+  }
+  @media only screen and (min-width: 480px) {
+    .cd-fixed-bg {
+      background-attachment: fixed;
+    }
+    /* .cd-fixed-bg h1, .cd-fixed-bg h2 {
+      font-size: 48px;
+      font-weight: 300;
+    } */
+  }
+  
+  .cd-scrolling-bg {
+    position: relative;
+    min-height: 50%;
+    padding: 4em 0;
+    line-height: 1.6;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+  .cd-scrolling-bg.cd-color-1 {
+    background-color: rgba(163, 154, 31, 0.85);      
+    color: #0a0401;
+  }
+  .cd-scrolling-bg.cd-color-2 {
+    background-color: rgba(98, 107, 13, 0.85);
+    color: #0a0401;
+  }
+  .cd-scrolling-bg.cd-color-3 {
+    background-color: rgba(110, 34, 4, 0.85);
+    color: #e6dbdd;
+  }
+  @media only screen and (min-width: 480px) {
+    .cd-scrolling-bg {
+      padding: 8em 0;
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 2;
+      font-weight: 300;
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+	.btn-mobile-menu {
+        display: block;
+        z-index: 1000;
+	}
+
+	.nav-main {
+		/* clear: both; */
+		height: 0;
+		overflow: hidden;
+		-webkit-transition: height 0.3s ease;
+		transition: height 0.3s ease;
+	}
+
+	.show-mobile-menu .nav-main {
+		height: 80px;
+		margin-top: 1%;
+	}
+
+	.nav-main a {
+		display: block;
+		border-left: none;
+		border-bottom: 1px solid #024109;
+		background-color: #F59740;
+		line-height: 43px;
+		color: black;
+		padding-top: 1px;
+		font-weight: bold;
+    }
+    
+    .nav-main ul {
+        display: block;
+    }
+
+	.nav-main li:first-child a {
+		padding-top: 0;
+        border-top: 1px solid #024109;
+        text-align: center;
+	}
+
+	.nav-main li:last-child a {
+		border-bottom: none;
+        padding: 1px 0;
+        text-align: center;    
+	}
+
+	.nav-main a:focus,
+	.nav-main a:hover,
+	.nav-main a:active {
+		background-color: #F59740;
+	}
+
+	.nav-main .nav-active {
+		color: red;
+	}
+}
+
+  
