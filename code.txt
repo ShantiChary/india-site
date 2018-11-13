@@ -1,3 +1,175 @@
+scroliing front page:
+
+            <div class="cd-fixed-bg cd-bg-1">
+                    <h1>Incredible India</h1>
+                </div> <!-- cd-fixed-bg -->
+        
+                <div class="cd-scrolling-bg cd-color-2">
+                        <div class="cd-container">
+                            <p>
+                                Lorem ipsum dolor sit amet, eum civibus mediocrem at, eam illud integre tincidunt eu. Ea cum minim eirmod fierent, et ius aeterno suscipit. Vel eu affert ornatus consequuntur, ad ius aeque aperiri ponderum. Cu putant feugiat officiis vis. Error zril an vim. Exerci commune repudiare ea duo, eam in affert graecis nominati. Per an vide omnis exerci. Brute forensibus ex mei, nam dicant ocurreret ut, suas insolens mediocrem usu at. Mel at movet everti nominavi, ei quidam nostrud sea.
+                            </p>
+                            <p>
+                                Exerci commune repudiare ea duo, eam in affert graecis nominati. Per an vide omnis exerci. Brute forensibus ex mei, nam dicant ocurreret ut, suas insolens mediocrem usu at. Mel at movet everti nominavi, ei quidam nostrud sea.
+                            </p>
+                        </div> <!-- cd-container -->
+                    </div> <!-- cd-scrolling-bg -->
+
+                    <div class="cd-fixed-bg cd-bg-2">
+                            <h2>From the vast deserts in the north....</h2>
+                        </div> <!-- cd-fixed-bg -->
+                
+                        <div class="cd-scrolling-bg cd-color-3">
+                            <div class="cd-container">
+                              <p>Exerci commune repudiare ea duo, eam in affert graecis nominati. Per an vide omnis exerci. Brute forensibus ex mei, nam dicant ocurreret ut, suas insolens mediocrem usu at. Mel at movet everti nominavi, ei quidam nostrud sea.</p>
+                              
+                              <p>Exerci commune repudiare ea duo, eam in affert graecis nominati. Per an vide omnis exerci. Brute forensibus ex mei, nam dicant ocurreret ut, suas insolens mediocrem usu at. Mel at movet everti nominavi, ei quidam nostrud sea.</p>
+                              
+                              <p>Exerci commune repudiare ea duo, eam in affert graecis nominati.Exerci commune repudiare ea duo, eam in affert graecis nominati.
+                                </p>
+                            </div> <!-- cd-container -->
+                        </div> <!-- cd-scrolling-bg -->
+                
+                        <div class="cd-fixed-bg cd-bg-3">
+                            <h2>to the fertile plains in the south...</h2>
+                        </div> <!-- cd-fixed-bg -->
+                
+                        <div class="cd-scrolling-bg cd-color-1">
+                            <div class="cd-container">
+                                <p>
+                                    Exerci commune repudiare ea duo, eam in affert graecis nominati. Per an vide omnis exerci. Brute forensibus ex mei, nam dicant ocurreret ut, suas insolens mediocrem usu at. Mel at movet everti nominavi, ei quidam nostrud sea.
+                                </p>
+                            </div> <!-- cd-container -->
+                        </div> <!-- cd-scrolling-bg -->
+                
+                        <div class="cd-fixed-bg cd-bg-4">
+                            <h2>India is a land of remarkable diversity.</h2>
+                        </div> <!-- cd-fixed-bg -->
+
+
+======
+header:
+
+                <div class="full-header">
+                    <header>
+                        <a href="index.html">
+                            <picture class="logo">
+                                <!-- <source media="(max-width: 440px)"
+                                srcset="./images/small-flag.png">  -->
+                                <img src="./images/small-flag-logo.png" alt="logo">
+                            </picture>
+                        </a>
+        
+                        <div>
+                            <img class="btn-mobile-menu" src="./images/menu.jpg" alt="Hamburger Menu Icon">
+                        </div>                   
+                    </header>
+
+                    <nav class="nav-main">                              
+                            <ul>
+                                <li><a href="history.html">History</a></li>
+                                <li><a href="geography.html">Geography</a></li>
+                                <li><a href="food.html">Food</a></li>                
+                            </ul>
+                    </nav> 
+                 </div>
+
+-==============
+
+
+
+style.css:
+
+  .cd-container {
+    /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+    width: 90%;
+    /* max-width: 768px; */
+    margin: 0 auto; 
+  }
+  .cd-container::after {
+    /* clearfix */
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  .cd-main-content {
+    /* you need to assign a min-height to the main content so that the children can inherit it*/
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    min-height:100%;     
+  }
+  
+  .cd-fixed-bg {
+    position: relative;
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+  }
+  .cd-fixed-bg h1 {
+    position: absolute;
+    left: 50%;
+    top: 28%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 90%;
+    max-width: 1170px;
+    text-align: center;
+	  color: rgb(228, 226, 114);
+	  text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+    font-size: 8em;
+  }
+
+ .cd-fixed-bg h2 {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 90%;
+    max-width: 1170px;
+    text-align: center;
+	  color: rgb(228, 226, 114);
+	  text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+    font-size: 4em;
+  }
+
+  .cd-fixed-bg.cd-bg-1 {
+    background-image: url("../images/bandhni.jpg");
+  }
+  .cd-fixed-bg.cd-bg-2 {
+    background-image: url("../images/rajasthan.jpg");    
+    /* background-image: linear-gradient(rgba(255,255,255, 0.15), rgba(255,255,255,0.15)), url("../images/rajasthan.jpg"); */
+  }
+  .cd-fixed-bg.cd-bg-3 {
+    background-image:url("../images/temple.jpg");      
+  }
+  .cd-fixed-bg.cd-bg-4 {
+    background-image: url("../images/kerala.jpg");
+    margin: 0;
+    padding: 0;    
+  }
+
+  /* Common styles */
+.cd-fixed-bg {
+  /* background-size: 100%; */
+  background-repeat: no-repeat; 
+}
+
+================
   .nav-main {
     display: none;
     height: 120px;
